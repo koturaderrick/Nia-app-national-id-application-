@@ -1,0 +1,52 @@
+name: national_id_app
+description: National ID Application - Flutter BLoC Architecture
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.1.6
+  equatable: ^2.0.5
+  shared_preferences: ^2.3.2
+  dio: ^5.7.0
+  image_picker: ^1.1.2
+  file_picker: ^8.1.2
+  get_it: ^7.7.0
+  intl: ^0.19.0
+  uuid: ^4.5.1
+  path: ^1.9.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  # These MUST be in dev_dependencies, not just config sections
+  flutter_launcher_icons: ^0.14.4
+  flutter_native_splash: ^2.4.0
+
+flutter:
+  uses-material-design: true
+  # ── Assets must be declared here for Image.asset() to work ──────────────
+  assets:
+    - assets/icon/icon.jpg
+    - assets/icon/nira.png
+
+# ── Launcher icon config ──────────────────────────────────────────────────
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/icon.jpg"
+
+# ── Native splash config ──────────────────────────────────────────────────
+flutter_native_splash:
+  android: true
+  ios: true
+  web: false
+  color: "#FFFFFF"
+  image: "assets/icon/nira.png"
+  android_gravity: center
+  ios_content_mode: center
