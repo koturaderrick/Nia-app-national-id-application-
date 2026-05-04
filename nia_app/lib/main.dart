@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-// Screens
+
 import 'presentation/screens/splash_screen.dart';
 import 'presentation/screens/auth/login_screen.dart';
 import 'presentation/screens/auth/signup_screen.dart';
@@ -11,23 +11,23 @@ import 'presentation/screens/application/application_form_screen.dart';
 import 'presentation/screens/application/submission_success_screen.dart';
 import 'presentation/screens/tracking/tracking_screen.dart';
 
-// BLoCs
+
 import 'presentation/blocs/auth/auth_bloc.dart';
 import 'presentation/blocs/application/application_bloc.dart';
 import 'presentation/blocs/tracking/tracking_bloc.dart';
 
-// Use cases
+
 import 'domain/usecases/login_usecase.dart';
 import 'domain/usecases/signup_usecase.dart';
 import 'domain/usecases/submit_application_usecase.dart';
 import 'domain/usecases/track_application_usecase.dart';
 
-// Repositories
+
 import 'data/repositories/auth_repository_impl.dart';
 import 'data/repositories/application_repository_impl.dart';
 import 'data/repositories/tracking_repository_impl.dart';
 
-// Data sources
+
 import 'data/datasources/local/auth_local_datasource.dart';
 import 'data/datasources/remote/auth_remote_datasource.dart';
 import 'data/datasources/remote/application_remote_datasource.dart';
@@ -112,8 +112,8 @@ class MyApp extends StatelessWidget {
           '/signup':   (_) => const SignupScreen(),
           '/home':     (_) => const HomeScreen(),
           '/apply':    (_) => const ApplicationFormScreen(),
-          '/success':  (_) => const SubmissionSuccessScreen(), // FIX: was missing
-          '/tracking': (_) => const TrackingScreen(),          // FIX: was missing
+          '/success':  (_) => const SubmissionSuccessScreen(), 
+          '/tracking': (_) => const TrackingScreen(),          
         },
       ),
     );

@@ -7,7 +7,6 @@ class SubmissionSuccessScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Tracking number passed from ApplicationFormScreen via Navigator arguments
     final trackingNumber =
         ModalRoute.of(context)?.settings.arguments as String? ??
             'NID-UNKNOWN';
@@ -111,7 +110,6 @@ class SubmissionSuccessScreen extends StatelessWidget {
               ),
               const SizedBox(height: 12),
 
-              // ── Back to home ──────────────────────────────────────────────
               CustomButton(
                 text: 'Back to Home',
                 icon: Icons.home_outlined,

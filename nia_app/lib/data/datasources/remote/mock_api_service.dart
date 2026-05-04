@@ -4,8 +4,6 @@ import 'package:uuid/uuid.dart';
 import '../../../core/errors/failures.dart';
 import '../local/auth_local_datasource.dart';
 
-/// Simulates a remote API with realistic delays.
-/// Swap the method bodies for real Dio/http calls when a backend is ready.
 class MockApiService {
   final AuthLocalDataSource localDataSource;
   static const _uuid = Uuid();

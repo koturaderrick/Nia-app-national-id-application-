@@ -45,7 +45,6 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       );
       emit(AuthAuthenticated(user));
     } catch (e) {
-      // e.toString() works correctly now because Failure overrides toString()
       emit(AuthError(e.toString()));
     }
   }

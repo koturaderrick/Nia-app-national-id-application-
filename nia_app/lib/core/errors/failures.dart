@@ -2,8 +2,7 @@ abstract class Failure {
   final String message;
   const Failure(this.message);
 
-  // Without this, e.toString() returns "Instance of 'AuthFailure'"
-  // instead of the actual message — root cause of the garbled error text
+  
   @override
   String toString() => message;
 }

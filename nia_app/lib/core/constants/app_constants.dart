@@ -1,8 +1,8 @@
 class AppConstants {
   static const String appName = 'National ID App';
 
-  // ── Odoo backend URL ───────────────────────────────────────────────────
-  // Change this to your Odoo server IP when testing on a real device
+  // Odoo backend URL 
+  
   static const String baseUrl = 'http://192.168.40.129:8069';
 
   // SharedPreferences keys
@@ -15,7 +15,7 @@ class AppConstants {
   static const String keyRegisteredUsers       = 'registered_users';
   static const String keySubmittedApplications = 'submitted_applications';
 
-  // Tracking stages — must match Odoo state_map in controller
+  // Tracking stages 
   static const List<String> trackingStages = [
     'Pending',
     'Verified',

@@ -20,11 +20,9 @@ class TrackingScreen extends StatefulWidget {
 class _TrackingScreenState extends State<TrackingScreen> {
   final _formKey = GlobalKey<FormState>();
   final _trackingController = TextEditingController();
-  bool _didInit = false; // guard so didChangeDependencies only auto-tracks once
+  bool _didInit = false; 
 
-  // FIX: moved from initState() to didChangeDependencies()
-  // ModalRoute.of(context) requires an active BuildContext with
-  // InheritedWidgets — that's not available during initState()
+  
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
@@ -34,7 +32,7 @@ class _TrackingScreenState extends State<TrackingScreen> {
           ModalRoute.of(context)?.settings.arguments as String?;
       if (prefilled != null) {
         _trackingController.text = prefilled;
-        // Use addPostFrameCallback so the form is built before we validate
+        
         WidgetsBinding.instance.addPostFrameCallback((_) => _track());
       }
     }
